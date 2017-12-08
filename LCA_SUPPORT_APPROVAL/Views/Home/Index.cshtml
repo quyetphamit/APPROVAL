@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách các năm</h2>
+@foreach (var item in ViewBag.listYear)
+{
+    @*<a href="#">@item</a>*@
+    <button type="button" class="button" onclick="location.href='@Url.Action("Index", "Request")'"><span>@item</span></button>
+    <br />
+}
